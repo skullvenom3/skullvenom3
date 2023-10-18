@@ -19,8 +19,8 @@ namespace ConsoleApp8
 
             while ((doneCheck = Console.ReadLine()) != "Done")
             {
-                elem = Array.IndexOf(names, doneCheck);
                 depot.Add(names[elem], new Tuple<long, double>(quantity[elem], prices[elem]));
+                elem++;
             }
 
             foreach (KeyValuePair<string, Tuple<long, double>> item in depot)
@@ -30,4 +30,3 @@ namespace ConsoleApp8
         }
     }
 }
-
